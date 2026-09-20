@@ -8,6 +8,13 @@
 
 NewUserでNameとAgeを設定したUserを返す。
 
+## Examples
+
+| 入力・操作 | 期待する結果 |
+|---|---|
+| `NewUser("Aki", 21)` | `User{Name: "Aki", Age: 21}` |
+| `NewUser("", 0)` | `User{Name: "", Age: 0}` |
+
 ## Constraints
 
 - テストを変更せず、関数のsignatureと契約を守る。

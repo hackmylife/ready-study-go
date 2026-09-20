@@ -8,6 +8,14 @@ UTF-8のコードポイントを扱う。
 
 Reverseはruneの順序を逆転する。結合文字を一文字にまとめる処理は不要。
 
+## Examples
+
+| 入力・操作 | 期待する結果 |
+|---|---|
+| `Reverse("Go猫")` | `"猫oG"` |
+| `Reverse("a🙂b")` | `"b🙂a"` |
+| `Reverse("")` | `""` |
+
 ## Constraints
 
 - テストを変更せず、関数のsignatureと契約を守る。

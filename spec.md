@@ -197,32 +197,48 @@ README.md
 
 必要に応じてfixture等を追加してよい。
 
-READMEには以下だけを書く。
+READMEは以下の構成とし、Taskで処理の目的、引数と戻り値の意味を説明する。
 
 ```markdown
-# Exercise: Error Wrapping
+# Exercise: Constants
 
 ## Goal
 
-error wrappingを理解する。
+定数を式の中で利用する。
 
 ## Task
 
-LoadUserを実装する。
+指定した日数が合計何分に相当するかを返すMinutesInDaysを実装する。
+引数daysの単位は「日」、戻り値の単位は「分」とする。
+MinutesPerHourは1時間が何分か、HoursPerDayは1日が何時間かを表す定数として定義する。
+
+## Examples
+
+| 入力 | 期待する戻り値 |
+|---|---|
+| MinutesInDays(0) | 0分 |
+| MinutesInDays(1) | 1440分 |
+| MinutesInDays(3) | 4320分 |
 
 ## Constraints
 
-- panic禁止
-- errorを握りつぶさない
+- テストを変更しない
+- 定義した定数を使う
 
 ## Run
 
 go test
 ```
 
-READMEに答えを書きすぎないこと。
+各ExerciseのREADMEに、具体的な入力と期待結果を必ず含める。
 
-**テストと関数signatureから要求を読み取ること自体も学習対象とする。**
+戻り値に加え、その演習で重要なエラー、変更後の状態、HTTP応答、DBの保存結果も示す。
+数値には必要な単位を付ける。通常ケースに加え、空入力や失敗などの代表的なケースも示す。
+Testing Exerciseでは、学習者が書くテストで検証する対象関数の振る舞いを示す。
+
+実装手順や模範コードはHintとSolutionに置く。
+
+**READMEの目的・入出力例で課題を理解した上で、テストと関数signatureから詳細な要求を読み取ることも学習対象とする。**
 
 ---
 
@@ -1056,6 +1072,7 @@ SolutionがIdiomatic
 * 各Exerciseは基本5〜15分で完了できる
 * 1 Exercise = 1 Conceptを基本とする
 * 全Exerciseにテストが存在する
+* 全ExerciseのREADMEに処理の目的と具体的な入力・期待結果が存在する
 * TODO状態では対象テストが失敗する
 * 正しく実装するとテストが成功する
 * Goらしさを学ぶExerciseが存在する
@@ -1072,4 +1089,3 @@ SolutionがIdiomatic
 > **Goの正解を知っている人ではなく、エディタを開いたら自然にGoを書き始められる人を育てること。**
 
 である。
-

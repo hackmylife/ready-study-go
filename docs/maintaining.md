@@ -6,6 +6,8 @@
 
 模範解答は`solutions/<演習>/solution.go`にあり、`//go:build ignore`で通常のbuildから除外しています。Testing章では`solution_test.go`が模範テストです。`koans verify`はリポジトリを一時コピーし、解答で対象ファイルを置換してから検証します。学習者の解答は上書きしません。
 
+学習者向けの`koans check PATH`は、対象演習のテスト・欠陥検出に加えて、gofmt・vet・staticcheckを検証します。`koans lint PATH`では静的な確認だけを実行します。`koans diff PATH`は一時コピー上で整形して模範解答と比較し、差分があること自体は失敗にしません。比較対象は模範解答に対応するGoファイルと`curriculum.json`の`remove`に指定したファイルです。学習者が別途追加したファイルの内容は、必要に応じて個別に確認してください。
+
 ```bash
 make fmt-check
 go vet ./...
@@ -31,6 +33,10 @@ go run ./cmd/koans verify --starters
 5. 解答でテストが通ることを確かめる。
 6. 対象の振る舞いを壊し、テストのassertionが失敗することを確かめる。
 7. 章のREADMEと全演習一覧を更新する。
+
+READMEのTaskには、処理の目的と引数・戻り値の意味を書きます。Examplesには具体的な入力と期待結果を載せ、数値には必要な単位を付けます。例えば日数を分に換算する課題なら、`MinutesInDays(1)` の戻り値は `1440` 分、`MinutesInDays(0)` は `0` 分と示します。
+
+通常の戻り値に加え、エラーや変更後の状態も課題に合わせて示してください。HTTPならrequestとresponse、DBなら処理前後のデータ、Testing章なら学習者がテストで検証する対象関数の振る舞いを例にします。実装手順や模範コードはHintとSolutionへ置きます。
 
 各演習は独立したGo packageです。入力型を共有するだけのために隣の演習へ依存させません。DBのテスト準備だけは`internal/dbtest`を共通利用します。共有helperは学習者が解くコードへ業務上の設計を押し込みません。
 

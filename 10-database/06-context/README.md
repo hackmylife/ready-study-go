@@ -8,6 +8,13 @@ DB操作にキャンセルを伝える。
 
 Pingは受け取ったcontextでDBを検証する。キャンセル後にBackgroundでやり直さない。
 
+## Examples
+
+| 入力・操作 | 期待する結果 |
+|---|---|
+| 利用可能なDBとキャンセルされていないctxで `Ping` | `nil` |
+| 同じDBとキャンセル済みctxで `Ping` | `context.Canceled` を原因に含むerror |
+
 ## Constraints
 
 - テストを変更せず、関数のsignatureと契約を守る。

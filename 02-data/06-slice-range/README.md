@@ -8,6 +8,14 @@ sliceを走査して新しいsliceを作る。
 
 Doubleは各要素を二倍にする。入力を変更せず、nil入力にはnilを返す。
 
+## Examples
+
+| 入力・操作 | 期待する結果 |
+|---|---|
+| `Double([]int{2, -3, 0})` | `[]int{4, -6, 0}`。入力のsliceは変わらない |
+| `Double(nil)` | `nil` |
+| `Double([]int{})` | `[]int{}`（nilではない） |
+
 ## Constraints
 
 - テストを変更せず、関数のsignatureと契約を守る。

@@ -8,6 +8,15 @@ errorの原因を文字列以外で検証する。
 
 Load(false)がwrapされたErrMissingを返すこと、Load(true)が成功することを検証する。
 
+## Examples
+
+以下は、あなたが書くテストで検証する対象関数の振る舞いです。テストコード自体を実装してください。
+
+| 入力・操作 | 期待する結果 |
+|---|---|
+| `Load(true)` | `nil` |
+| `Load(false)` | errorの表示は `"load: missing"`、`errors.Is(err, ErrMissing)` は `true` |
+
 ## Constraints
 
 - exercise_test.goを編集する。exercise.goとmutants/は変更しない。

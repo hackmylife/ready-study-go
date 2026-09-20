@@ -8,6 +8,13 @@
 
 ReadAllはReaderを最後まで読み、途中のエラーも返す。
 
+## Examples
+
+| 入力・操作 | 期待する結果 |
+|---|---|
+| 内容が `"猫"` のReaderを `ReadAll` に渡す | バイト列の内容は `"猫"`、errorは `nil` |
+| 最後のReadで `"Go"` のデータと `io.EOF` を同時に返すReader | バイト列の内容は `"Go"`、errorは `nil`。最後のデータも含む |
+
 ## Constraints
 
 - テストを変更せず、関数のsignatureと契約を守る。

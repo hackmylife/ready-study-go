@@ -8,6 +8,13 @@
 
 NewCounterを削除し、ゼロ値のCounterでAddとValueを使えるようにする。
 
+## Examples
+
+| 入力・操作 | 期待する結果 |
+|---|---|
+| `var c Counter`、`c.Add(2)`、`c.Value()` | `2` |
+| 変更後のコード | `NewCounter` が存在せず、上の操作がそのまま使える |
+
 ## Constraints
 
 - テストを変更せず、関数のsignatureと契約を守る。

@@ -8,6 +8,14 @@ query parameterを読み検証する。
 
 Limitは未指定なら20、指定値は1〜100の整数を受け付ける。空値と重複指定は拒否する。
 
+## Examples
+
+| 入力・操作 | 期待する結果 |
+|---|---|
+| URLが `/` のrequestを `Limit` に渡す | `(20, nil)` |
+| URLが `/?limit=1` / `/?limit=100` | それぞれ `(1, nil)` / `(100, nil)` |
+| URLが `/?limit=` / `/?limit=0` / `/?limit=1&limit=2` | いずれもerror |
+
 ## Constraints
 
 - テストを変更せず、関数のsignatureと契約を守る。

@@ -6,7 +6,13 @@ value receiverで元の値を保つ。
 
 ## Task
 
-Point.Movedは移動したコピーを返す。
+点の座標 `X` と `Y` にそれぞれ移動量 `dx` と `dy` を加えた、新しい `Point` を返す `Moved` を実装してください。元の点の座標は変更しません。
+
+## Examples
+
+| 入力・操作 | 期待する結果 |
+|---|---|
+| `p := Point{X: 2, Y: 5}` に対して `p.Moved(3, -2)` | 戻り値は `Point{X: 5, Y: 3}`。元の `p` は `Point{X: 2, Y: 5}` のまま |
 
 ## Constraints
 

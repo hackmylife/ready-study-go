@@ -8,6 +8,13 @@ Client全体のtimeoutを設定する。
 
 NewClientは正のtimeoutを設定した新しいClientを返す。既定の共有Clientは変更しない。
 
+## Examples
+
+| 入力・操作 | 期待する結果 |
+|---|---|
+| `NewClient(2*time.Second)` | Timeoutが `2*time.Second` の新しいClientと `nil` error |
+| `NewClient(0)` | error。共有の `http.DefaultClient` は変わらない |
+
 ## Constraints
 
 - テストを変更せず、関数のsignatureと契約を守る。

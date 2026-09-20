@@ -8,6 +8,16 @@
 
 CopyFirstはReaderから先頭nバイトを読む。短い入力と読み取りerrorを含めて検証する。n >= 0。
 
+## Examples
+
+以下は、あなたが書くテストで検証する対象関数の振る舞いです。テストコード自体を実装してください。
+
+| 入力・操作 | 期待する結果 |
+|---|---|
+| 内容 `"abcdef"` のReaderと `n=3` を `CopyFirst` に渡す | バイト列の内容は `"abc"`、errorは `nil` |
+| 内容 `"a"` のReaderと `n=3` | バイト列の内容は `"a"`、errorは `nil` |
+| 読み取りerrorを返すReaderと `n=3` | 原因errorを返す |
+
 ## Constraints
 
 - exercise_test.goを編集する。exercise.goとmutants/は変更しない。

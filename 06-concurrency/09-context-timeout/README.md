@@ -8,6 +8,13 @@
 
 WithTimeoutは期限付きcontextでworkを実行し、戻る時にcancelする。
 
+## Examples
+
+| 入力・操作 | 期待する結果 |
+|---|---|
+| timeoutを `0` にしてworkへctxを渡す | workから見えるctxのerrorは `context.DeadlineExceeded` |
+| timeoutを `time.Hour` にしてworkがすぐ成功する | 戻り値は `nil`。関数から戻った時点で子ctxはキャンセル済み |
+
 ## Constraints
 
 - テストを変更せず、関数のsignatureと契約を守る。

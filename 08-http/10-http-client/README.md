@@ -8,6 +8,13 @@ HTTP Clientのstatusとbody寿命を扱う。
 
 FetchはGETで200の本文を返す。他statusはerror。response bodyは必ずCloseする。
 
+## Examples
+
+| 入力・操作 | 期待する結果 |
+|---|---|
+| FetchのGETに対し、サーバーが200と本文 `Go` を返す | 戻り値は `("Go", nil)`。response bodyをCloseする |
+| サーバーが503を返す | errorを返す。この場合もbodyをCloseする |
+
 ## Constraints
 
 - テストを変更せず、関数のsignatureと契約を守る。

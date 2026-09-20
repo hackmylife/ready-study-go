@@ -8,6 +8,14 @@ structをJSONの契約に合わせて出力する。
 
 UserにJSONタグを設定しEncodeを実装する。Secretは出力しない。
 
+## Examples
+
+JSONのキー順は問いません。
+
+| 入力・操作 | 期待する結果 |
+|---|---|
+| `Encode(User{Name: "猫", Age: 0, Secret: "private"})` | JSONは `{"name":"猫","age":0}`、errorは `nil`。`Secret` は含まれない |
+
 ## Constraints
 
 - テストを変更せず、関数のsignatureと契約を守る。

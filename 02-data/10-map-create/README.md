@@ -8,6 +8,13 @@
 
 Indexは名前をキー、最後に現れた添字を値にする。空入力でも書き込めるmapを返す。
 
+## Examples
+
+| 入力・操作 | 期待する結果 |
+|---|---|
+| `Index([]string{"a", "b", "a"})` | `map[string]int{"a": 2, "b": 1}` |
+| `Index(nil)` | 空のmap。返されたmapに新しいキーを書き込める |
+
 ## Constraints
 
 - テストを変更せず、関数のsignatureと契約を守る。

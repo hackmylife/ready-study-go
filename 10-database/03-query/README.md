@@ -8,6 +8,13 @@
 
 Namesはid順に全ユーザー名を返す。空なら非nilの空slice。Rows.Errを確認する。
 
+## Examples
+
+| 入力・操作 | 期待する結果 |
+|---|---|
+| usersに `u1/Aki` と `u2/Ren` がある状態で `Names(ctx, db)` | `[]string{"Aki", "Ren"}` と `nil` error（id順） |
+| usersが空 | nilではない空sliceと `nil` error |
+
 ## Constraints
 
 - テストを変更せず、関数のsignatureと契約を守る。

@@ -8,6 +8,14 @@ rangeで値を列挙する。
 
 CountPositiveは正の整数の個数を返す。
 
+## Examples
+
+| 入力・操作 | 期待する結果 |
+|---|---|
+| `CountPositive([]int{-1, 0, 3, 4})` | `2`（3と4が正の数） |
+| `CountPositive([]int{-3})` | `0` |
+| `CountPositive(nil)` | `0` |
+
 ## Constraints
 
 - テストを変更せず、関数のsignatureと契約を守る。

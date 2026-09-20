@@ -8,6 +8,12 @@ contextを下流へ伝播する。
 
 Fetchは受け取ったcontextをloadにそのまま渡す。
 
+## Examples
+
+| 入力・操作 | 期待する結果 |
+|---|---|
+| キャンセル済みctxを `Fetch` に渡し、loadが受け取ったctxのerrorを返す | loadに同じctxが届き、`Fetch` のerrorは `context.Canceled` |
+
 ## Constraints
 
 - テストを変更せず、関数のsignatureと契約を守る。

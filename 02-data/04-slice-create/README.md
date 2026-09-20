@@ -8,6 +8,13 @@
 
 Zerosは長さnのゼロで初期化されたsliceを返す。n >= 0。n=0でもnilにはしない。
 
+## Examples
+
+| 入力・操作 | 期待する結果 |
+|---|---|
+| `Zeros(3)` | `[]int{0, 0, 0}` |
+| `Zeros(0)` | `[]int{}`（nilではない空slice） |
+
 ## Constraints
 
 - テストを変更せず、関数のsignatureと契約を守る。

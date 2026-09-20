@@ -56,7 +56,7 @@ func run(args []string) error {
 		return err
 	}
 	if len(args) == 0 {
-		fmt.Println("koans list | check PATH | progress | next | hint PATH 1..3 | verify [--starters]")
+		fmt.Println("koans list | check PATH | lint PATH | diff PATH | progress | next | hint PATH 1..3 | verify [--starters]")
 		return nil
 	}
 	switch args[0] {
@@ -69,13 +69,30 @@ func run(args []string) error {
 			fmt.Printf("%s  %s%s\n", item.Path, item.Goal, suffix)
 		}
 		return nil
-	case "check", "hint":
+	case "check", "lint", "diff", "hint":
 		if len(args) < 2 {
 			return errors.New("演習のパスを指定してください")
 		}
 		item, err := lookup(items, strings.TrimPrefix(strings.TrimSuffix(args[1], "/"), "./"))
 		if err != nil {
 			return err
+		}
+		if args[0] != "hint" && len(args) != 2 {
+			return fmt.Errorf("%s PATH を指定してください", args[0])
+		}
+		if args[0] == "lint" {
+			return lintExercise(root, item)
+		}
+		if args[0] == "diff" {
+			changed, err := solutionDiff(root, item, os.Stdout)
+			if err != nil {
+				return err
+			}
+			if !changed {
+				fmt.Println("整形後のコードは模範解答と同じです。")
+			}
+			fmt.Printf("差分の - は自分のコード、+ は模範解答です。違いがあっても不正解とは限りません。\n解説: solutions/%s/explanation.md\n", item.Path)
+			return nil
 		}
 		if args[0] == "hint" {
 			if len(args) != 3 {
@@ -110,9 +127,14 @@ func run(args []string) error {
 			return errors.New("成功したテストがありません。テストの削除や全件skipを確認してください")
 		}
 		if item.Kind == "testing" {
-			return checkMutants(root, item)
+			if err := checkMutants(root, item); err != nil {
+				return err
+			}
 		}
-		fmt.Println("PASS — 模範解答のexplanation.mdと比較し、設計上の理由を説明してみましょう。")
+		if err := lintExercise(root, item); err != nil {
+			return err
+		}
+		fmt.Printf("PASS — テストとlintが成功しました。\n模範解答と比較する: go run ./cmd/koans diff %s\n", item.Path)
 		return nil
 	case "progress", "next":
 		selected := available(items)
@@ -349,12 +371,7 @@ func overlay(root, dir string, item exercise) error {
 		if err != nil {
 			return err
 		}
-		base := filepath.Base(rel)
-		if base == "solution.go" {
-			rel = filepath.Join(filepath.Dir(rel), "exercise.go")
-		} else if base == "solution_test.go" {
-			rel = filepath.Join(filepath.Dir(rel), "exercise_test.go")
-		}
+		rel = solutionTarget(rel)
 		data, err := os.ReadFile(path)
 		if err != nil {
 			return err

@@ -8,6 +8,14 @@
 
 Receiveは入力の値かcontextの終了を待つ。閉じた入力はio.EOF。
 
+## Examples
+
+| 入力・操作 | 期待する結果 |
+|---|---|
+| 入力channelから `7` を受信できる状態で `Receive` を呼ぶ | `(7, nil)` |
+| 値が残っていない閉じたchannelを渡す | errorは `io.EOF` |
+| 空のchannelと、キャンセル済みのctxを渡す | errorは `context.Canceled` |
+
 ## Constraints
 
 - テストを変更せず、関数のsignatureと契約を守る。

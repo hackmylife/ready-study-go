@@ -6,7 +6,14 @@
 
 ## Task
 
-Countをrace detectorが報告しない実装に直す。n >= 0。
+複数のgoroutineが共有カウンタを増やす `Count(n)` を修正してください。`n` 回増やして、全ての処理が終わった時点の合計を返します。`n >= 0` とし、`go test -race` が競合を報告しないようにします。
+
+## Examples
+
+| 入力・操作 | 期待する結果 |
+|---|---|
+| `Count(1000)` | `1000`。race detectorが競合を報告しない |
+| `Count(0)` | `0` |
 
 ## Constraints
 

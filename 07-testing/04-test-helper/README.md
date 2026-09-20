@@ -8,6 +8,16 @@
 
 ParseBoolの成功・失敗テストを書く。helper内でt.Helperを呼び、失敗箇所が呼び出し元を示すようにする。
 
+## Examples
+
+以下は、あなたが書くテストで検証する対象関数の振る舞いです。テストコード自体を実装してください。
+
+| 入力・操作 | 期待する結果 |
+|---|---|
+| `ParseBool("true")` / `ParseBool("1")` | どちらも `(true, nil)` |
+| `ParseBool("false")` | `(false, nil)` |
+| `ParseBool("invalid")` | errorが非nil |
+
 ## Constraints
 
 - exercise_test.goを編集する。exercise.goとmutants/は変更しない。

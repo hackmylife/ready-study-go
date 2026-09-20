@@ -8,6 +8,15 @@ SQLでCRUDを一通り実装する。
 
 usersの作成・取得・改名・削除を実装する。空ID/空白名を拒否する。重複作成はerror、対象がない取得・更新・削除はsql.ErrNoRows。
 
+## Examples
+
+| 入力・操作 | 期待する結果 |
+|---|---|
+| `Create` で `User{ID: "u3", Name: "Nao"}` を作り、`Find` でu3を取得 | 同じUserと `nil` error |
+| u3を `"Mei"` へ `Rename` して再取得 | `User{ID: "u3", Name: "Mei"}` と `nil` error |
+| u3を `Delete` して再取得 | 取得のerrorは `sql.ErrNoRows` |
+| 既に存在するu3を再び `Create` | error |
+
 ## Constraints
 
 - テストを変更せず、関数のsignatureと契約を守る。

@@ -1,4 +1,4 @@
-.PHONY: help list check progress next hint fmt fmt-check vet verify verify-starters test db-up db-down
+.PHONY: help list check lint diff progress next hint fmt fmt-check vet verify verify-starters test db-up db-down
 
 EX ?= 01-language/01-variables
 HINT ?= 1
@@ -11,6 +11,12 @@ list:
 
 check:
 	go run ./cmd/koans check "$(EX)"
+
+lint:
+	go run ./cmd/koans lint "$(EX)"
+
+diff:
+	go run ./cmd/koans diff "$(EX)"
 
 test: check
 

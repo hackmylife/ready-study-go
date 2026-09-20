@@ -8,6 +8,14 @@ PathValueでpathの値を読む。
 
 RoutesはGET /users/{id}に対してidを返す。
 
+## Examples
+
+| 入力・操作 | 期待する結果 |
+|---|---|
+| `GET /users/u1` | statusは `200`、本文は `u1` |
+| `GET /users/alice` | statusは `200`、本文は `alice` |
+| `GET /users/a/extra` | `404` |
+
 ## Constraints
 
 - テストを変更せず、関数のsignatureと契約を守る。

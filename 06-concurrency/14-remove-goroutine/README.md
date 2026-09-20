@@ -8,6 +8,14 @@
 
 Upperからgoroutineとchannelを削除し、同じ結果を同期的に返す。
 
+## Examples
+
+| 入力・操作 | 期待する結果 |
+|---|---|
+| `Upper("Go")` | `"GO"` |
+| `Upper("猫")` | `"猫"` |
+| 変更後のコード | 同じ結果を保ち、goroutineとchannelが存在しない |
+
 ## Constraints
 
 - テストを変更せず、関数のsignatureと契約を守る。

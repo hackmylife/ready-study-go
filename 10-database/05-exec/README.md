@@ -8,6 +8,13 @@
 
 Renameはnameを更新し、行がなければsql.ErrNoRowsを返す。
 
+## Examples
+
+| 入力・操作 | 期待する結果 |
+|---|---|
+| usersにu1があり、`Rename(ctx, db, "u1", "Nao")` | 戻り値は `nil`。u1のnameが `"Nao"` になる |
+| 同じ更新を存在しないidへ行う | `sql.ErrNoRows` |
+
 ## Constraints
 
 - テストを変更せず、関数のsignatureと契約を守る。

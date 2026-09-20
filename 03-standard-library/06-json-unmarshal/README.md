@@ -8,6 +8,13 @@ JSONからstructに読み込む。
 
 DecodeはUserを読み込む。未知フィールドは許可する。
 
+## Examples
+
+| 入力・操作 | 期待する結果 |
+|---|---|
+| JSON `{"name":"Aki","age":21,"extra":true}` のバイト列を `Decode` に渡す | `User{Name: "Aki", Age: 21}` と `nil` error |
+| JSON `{"age":"21"}` のバイト列を渡す | 型が違うのでerror |
+
 ## Constraints
 
 - テストを変更せず、関数のsignatureと契約を守る。

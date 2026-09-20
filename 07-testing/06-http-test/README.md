@@ -8,6 +8,14 @@ httptestでHTTPを検証する。
 
 Healthのstatus・Content-Type・JSON本文を検証する。外部通信は不要。
 
+## Examples
+
+以下は、あなたが書くテストで検証する対象関数の振る舞いです。テストコード自体を実装してください。
+
+| 入力・操作 | 期待する結果 |
+|---|---|
+| HealthへGET requestを渡す | statusは `200`、Content-Typeは `application/json`、JSON本文は `{"status":"ok"}` |
+
 ## Constraints
 
 - exercise_test.goを編集する。exercise.goとmutants/は変更しない。

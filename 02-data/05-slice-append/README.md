@@ -8,6 +8,13 @@ appendの戻り値を利用する。
 
 AppendValueは末尾にvalueを追加したsliceを返す。元の配列との共有は許可する。
 
+## Examples
+
+| 入力・操作 | 期待する結果 |
+|---|---|
+| `AppendValue([]string{"a", "b"}, "c")` | `[]string{"a", "b", "c"}` |
+| `AppendValue(nil, "x")` | `[]string{"x"}` |
+
 ## Constraints
 
 - テストを変更せず、関数のsignatureと契約を守る。

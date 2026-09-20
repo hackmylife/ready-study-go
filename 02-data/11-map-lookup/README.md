@@ -8,6 +8,14 @@ mapから値を取り出す。
 
 Stockは在庫数を返す。存在しないキーは0。
 
+## Examples
+
+| 入力・操作 | 期待する結果 |
+|---|---|
+| `Stock(map[string]int{"tea": 4}, "tea")` | `4` |
+| `Stock(map[string]int{"tea": 4}, "coffee")` | `0` |
+| `Stock(nil, "tea")` | `0` |
+
 ## Constraints
 
 - テストを変更せず、関数のsignatureと契約を守る。

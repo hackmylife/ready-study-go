@@ -8,6 +8,13 @@
 
 Popは先頭を返す。空入力ではErrEmptyを返す。
 
+## Examples
+
+| 入力・操作 | 期待する結果 |
+|---|---|
+| `Pop([]int{0, 4})` | 値は `0`、残りは `[]int{4}`、errorは `nil` |
+| `Pop(nil)` | errorは `ErrEmpty` |
+
 ## Constraints
 
 - テストを変更せず、関数のsignatureと契約を守る。

@@ -8,6 +8,13 @@
 
 WriteGreetingはHello, 名前と改行を書き、書き込みエラーを返す。
 
+## Examples
+
+| 入力・操作 | 期待する結果 |
+|---|---|
+| 空のbufferと名前 `"猫"` を `WriteGreeting` に渡す | bufferの内容は `"Hello, 猫\n"`、errorは `nil` |
+| 書き込みで `errWrite` を返すWriterに書く | 返るerrorに `errWrite` が保持される |
+
 ## Constraints
 
 - テストを変更せず、関数のsignatureと契約を守る。

@@ -6,7 +6,15 @@ stringの長さがバイト数であることを理解する。
 
 ## Task
 
-ByteLengthを実装する。
+文字列 `s` が何バイトで表されるかを返す `ByteLength` を実装してください。見た目の文字数とは異なる場合があります。
+
+## Examples
+
+| 入力・操作 | 期待する結果 |
+|---|---|
+| `ByteLength("Go")` | `2` バイト |
+| `ByteLength("猫")` | `3` バイト |
+| `ByteLength("")` | `0` バイト |
 
 ## Constraints
 

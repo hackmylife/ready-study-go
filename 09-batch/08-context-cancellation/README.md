@@ -8,6 +8,13 @@
 
 Processは各レコードの前にctxを確認しhandleへ渡す。キャンセル後に次のレコードを始めない。
 
+## Examples
+
+| 入力・操作 | 期待する結果 |
+|---|---|
+| `[]string{"a", "b"}` の処理中に、aのhandleがctxをキャンセルする | handleへ渡るのは `"a"` だけ。戻り値は `context.Canceled` |
+| キャンセルされていないctxで空のrowsを渡す | 何も処理せず、`nil` を返す |
+
 ## Constraints
 
 - テストを変更せず、関数のsignatureと契約を守る。

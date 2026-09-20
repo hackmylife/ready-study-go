@@ -8,6 +8,14 @@ nil sliceと空sliceの外部表現を区別する。
 
 JSONListはnilも空sliceもJSON配列として返す。
 
+## Examples
+
+| 入力・操作 | 期待する結果 |
+|---|---|
+| `JSONList(nil)` | 返されたバイト列の内容は `[]`、errorは `nil` |
+| `JSONList([]string{})` | バイト列の内容は `[]`、errorは `nil` |
+| `JSONList([]string{"a"})` | バイト列の内容は `["a"]`、errorは `nil` |
+
 ## Constraints
 
 - テストを変更せず、関数のsignatureと契約を守る。

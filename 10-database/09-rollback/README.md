@@ -8,6 +8,13 @@ callback失敗時にtransactionを取り消す。
 
 WithTxはfnが成功した時だけcommitし、失敗時はrollbackする。原因を保持する。
 
+## Examples
+
+| 入力・操作 | 期待する結果 |
+|---|---|
+| 初期残高100の口座をcallback内で0に更新した後、callbackが `cause` を返す | `WithTx` は原因 `cause` を保持したerrorを返す。DBの残高は `100` のまま |
+| 初期残高100をcallback内で80に更新し、callbackが成功する | 戻り値は `nil`、DBの残高は `80` |
+
 ## Constraints
 
 - テストを変更せず、関数のsignatureと契約を守る。

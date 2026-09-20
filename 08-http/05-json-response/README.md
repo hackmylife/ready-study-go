@@ -8,6 +8,12 @@ JSONのheaderと本文を返す。
 
 UserHandlerは200で{"name":"Aki"}を返す。
 
+## Examples
+
+| 入力・操作 | 期待する結果 |
+|---|---|
+| UserHandlerへGET requestを渡す | statusは `200`、Content-Typeは `application/json`、JSON本文は `{"name":"Aki"}` |
+
 ## Constraints
 
 - テストを変更せず、関数のsignatureと契約を守る。

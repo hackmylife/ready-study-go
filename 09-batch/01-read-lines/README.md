@@ -8,6 +8,13 @@
 
 EachLineは一行ずつvisitへ渡す。visitのerrorで中止し、読み取りerrorも返す。
 
+## Examples
+
+| 入力・操作 | 期待する結果 |
+|---|---|
+| 内容 `"a\n\nb"` のReaderを `EachLine` に渡す | visitには順に `"a"`、`""`、`"b"` が渡る。全て成功なら戻り値は `nil` |
+| 内容 `"a\nb"` に対し、最初のvisitがerrorを返す | `"b"` は処理せず、そのerrorを返す |
+
 ## Constraints
 
 - テストを変更せず、関数のsignatureと契約を守る。

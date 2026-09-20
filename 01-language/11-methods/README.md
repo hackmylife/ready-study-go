@@ -6,7 +6,14 @@
 
 ## Task
 
-Rectangle.Areaを実装する。辺の長さは非負とする。
+長方形の幅 `Width` と高さ `Height` から面積を求める `Rectangle.Area` を実装してください。辺の長さは非負とします。
+
+## Examples
+
+| 入力・操作 | 期待する結果 |
+|---|---|
+| `Rectangle{Width: 3, Height: 4}` の `Area()` | `12` |
+| `Rectangle{}` の `Area()` | `0` |
 
 ## Constraints
 

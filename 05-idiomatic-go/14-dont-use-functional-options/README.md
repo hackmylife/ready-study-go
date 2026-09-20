@@ -8,6 +8,14 @@
 
 OptionとWithPrefixを削除し、NewFormatter(prefix string) *Formatterに変更する。
 
+## Examples
+
+| 入力・操作 | 期待する結果 |
+|---|---|
+| `NewFormatter("> ").Format("Go")` | `"> Go"` |
+| `NewFormatter("").Format("Go")` | `"Go"` |
+| 変更後のコード | `Option` と `WithPrefix` が存在しない |
+
 ## Constraints
 
 - テストを変更せず、関数のsignatureと契約を守る。

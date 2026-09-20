@@ -8,6 +8,14 @@
 
 RoutesはGET /healthだけを200のokへ割り当てる。
 
+## Examples
+
+| 入力・操作 | 期待する結果 |
+|---|---|
+| `GET /health` | statusは `200`、本文は `ok` |
+| `POST /health` | `405` |
+| `GET /missing` | `404` |
+
 ## Constraints
 
 - テストを変更せず、関数のsignatureと契約を守る。

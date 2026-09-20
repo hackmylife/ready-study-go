@@ -8,6 +8,13 @@ mapのゼロ値を集計に使う。
 
 Countsは各単語の出現数を返す。大文字小文字は区別する。
 
+## Examples
+
+| 入力・操作 | 期待する結果 |
+|---|---|
+| `Counts([]string{"Go", "go", "Go"})` | `map[string]int{"Go": 2, "go": 1}` |
+| `Counts(nil)` | 空のmap |
+
 ## Constraints
 
 - テストを変更せず、関数のsignatureと契約を守る。

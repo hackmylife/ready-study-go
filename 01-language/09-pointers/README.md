@@ -8,6 +8,13 @@
 
 Incrementは値を増やしtrueを返す。nilならfalseを返す。
 
+## Examples
+
+| 入力・操作 | 期待する結果 |
+|---|---|
+| `n := 4` として `Increment(&n)` を呼ぶ | 戻り値は `true`、呼び出し後の `n` は `5` |
+| `Increment(nil)` | `false`。panicしない |
+
 ## Constraints
 
 - テストを変更せず、関数のsignatureと契約を守る。

@@ -8,6 +8,13 @@
 
 FieldError.ErrorとValidateを実装する。空のemailをFieldErrorで拒否する。
 
+## Examples
+
+| 入力・操作 | 期待する結果 |
+|---|---|
+| `Validate("")` | `*FieldError`。`Field` は `"email"`、`Reason` は `"required"`、表示は `"email: required"` |
+| `Validate("a@example.test")` | `nil` |
+
 ## Constraints
 
 - テストを変更せず、関数のsignatureと契約を守る。

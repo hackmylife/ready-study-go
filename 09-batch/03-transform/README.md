@@ -8,6 +8,13 @@
 
 NormalizeはNameの前後空白を除き小文字にし、Quantityを保って返す。
 
+## Examples
+
+| 入力・操作 | 期待する結果 |
+|---|---|
+| `Normalize(Order{Name: "  TEA ", Quantity: 3})` | `Order{Name: "tea", Quantity: 3}`。元のOrderは変わらない |
+| `Normalize(Order{})` | `Order{}` |
+
 ## Constraints
 
 - テストを変更せず、関数のsignatureと契約を守る。

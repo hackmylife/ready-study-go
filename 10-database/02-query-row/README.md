@@ -8,6 +8,13 @@
 
 Nameはusersからidに一致するnameを返す。未登録はsql.ErrNoRows。
 
+## Examples
+
+| 入力・操作 | 期待する結果 |
+|---|---|
+| usersに `id="u1", name="Aki"` があり、`Name(ctx, db, "u1")` | `("Aki", nil)` |
+| `Name(ctx, db, "missing")` | errorは `sql.ErrNoRows` |
+
 ## Constraints
 
 - テストを変更せず、関数のsignatureと契約を守る。

@@ -8,6 +8,13 @@ time.Durationで経過時間を扱う。
 
 ExpiresAtは起点にTTLを加える。
 
+## Examples
+
+| 入力・操作 | 期待する結果 |
+|---|---|
+| 起点が `2026-01-01 23:50 UTC`、TTLが `20*time.Minute` | `2026-01-02 00:10 UTC` |
+| 同じ起点でTTLが `0` | 起点と同じ時刻 |
+
 ## Constraints
 
 - テストを変更せず、関数のsignatureと契約を守る。

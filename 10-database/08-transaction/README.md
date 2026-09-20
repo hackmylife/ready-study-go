@@ -8,6 +8,13 @@
 
 RenameBothはu1とu2をまとめて改名する。二つ目が失敗したら一つ目も元に戻る。
 
+## Examples
+
+| 入力・操作 | 期待する結果 |
+|---|---|
+| `RenameBoth(ctx, db, "Nao", "Mei")` | 戻り値は `nil`。u1のnameは `"Nao"`、u2は `"Mei"` |
+| その後、空文字を拒否するDB制約の下で `RenameBoth(ctx, db, "changed", "")` | error。u1は `"Nao"`、u2は `"Mei"` のまま |
+
 ## Constraints
 
 - テストを変更せず、関数のsignatureと契約を守る。

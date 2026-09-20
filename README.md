@@ -31,12 +31,12 @@ go run ./cmd/koans next
 
 ## 学び方
 
-1. テストと関数signatureから要求を読む。
+1. 問題文と入出力例で目的を理解し、テストと関数signatureで詳細を確認する。
 2. 自分で書いてコンパイルする。
 3. compiler errorとtest failureを読む。
 4. `go doc`で標準ライブラリを調べる。
 5. 困ったらヒントを一つ開く。
-6. 通ったら`solutions/同じ演習パス/explanation.md`とコードを比較する。
+6. `check`でテストとlintを確認し、`diff`と解説で自分のコードを振り返る。
 7. 「なぜこの書き方か」を説明し、境界値テストを自分で追加する。
 
 ```bash
@@ -45,7 +45,23 @@ go run ./cmd/koans hint 01-language/01-variables 1
 go run ./cmd/koans check 01-language/01-variables
 ```
 
-`check`はrace detector付きで実行します。Testing章ではさらに欠陥実装へ一時的に差し替え、自分のテストが欠陥を検出できるか検証します。作業中のファイルは上書きしません。
+`check`はrace detector付きのテストが通った後、対象演習の`gofmt`・`go vet`・`staticcheck`を確認します。Testing章ではさらに欠陥実装へ一時的に差し替え、自分のテストが欠陥を検出できるか検証します。作業中のファイルは上書きしません。
+
+lintだけの実行や、模範解答との比較もできます。
+
+```bash
+go run ./cmd/koans lint 01-language/01-variables
+go run ./cmd/koans diff 01-language/01-variables
+# Makeを使う場合
+make lint EX=01-language/01-variables
+make diff EX=01-language/01-variables
+```
+
+`lint`は対象演習とそのサブパッケージを確認します。整形が必要と表示されたファイルは、`gofmt -w <ファイルのパス>`で整形してから再実行してください。DB演習のlintにもDB接続は不要です。
+
+`diff`は模範解答に対応するファイルを比較します。`-`が自分のコード、`+`が模範解答です。Testing章ではテスト同士を比較し、削除が課題のファイルも表示します。整形と模範解答専用のbuild tagの違いは除きます。Gitで変更を非表示にしていても、現在のファイルを読み取ります。
+
+**差分があっても不正解とは限りません。** `diff`は差分の有無では失敗せず、解説のパスも表示します。模範解答を見るタイミングは自分で決められ、`check`から自動表示はしません。
 
 基本演習の想定所要時間は5〜15分、実務演習は30〜60分、Capstoneは1〜3時間です。いずれも設計上の目安で、受講者による実測ではありません。分からない問題には印を付け、別の独立した問題へ進んでも構いません。
 
@@ -78,7 +94,7 @@ make check EX=01-language/01-variables
 make progress
 ```
 
-`PASS`は現在のテストが成功した演習、`TODO`はテスト失敗、`BUILD_ERROR`はビルド不成立、`TESTS_WEAK`はTesting章の欠陥検出不足、`NEEDS_DB`はDB未接続です。結果をその都度計算するため、進捗ファイルを手で更新する必要はありません。DBのskipを修了には数えません。
+`PASS`は現在のテストが成功した演習、`TODO`はテスト失敗、`BUILD_ERROR`はビルド不成立、`TESTS_WEAK`はTesting章の欠陥検出不足、`NEEDS_DB`はDB未接続です。`progress`と`next`ではlintを実行しないため、仕上げには`check`を使ってください。結果をその都度計算するため、進捗ファイルを手で更新する必要はありません。DBのskipを修了には数えません。
 
 解いたコードは自分のforkに保存します。学習用のbranchやcommitの切り方は自由です。自分の解答を教材本体へPull Requestする必要はありません。上流の更新を取り込む方法は[こちら](docs/fork-workflow.md)にあります。
 

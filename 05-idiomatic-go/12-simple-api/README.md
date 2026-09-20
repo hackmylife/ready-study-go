@@ -8,6 +8,14 @@ boolフラグの意味が伝わるAPIにする。
 
 既存のFormat(name, loud)を削除し、GreetingとLoudGreetingという二つの関数へ分ける。
 
+## Examples
+
+| 入力・操作 | 期待する結果 |
+|---|---|
+| `Greeting("Aki")` | `"Hello, Aki"` |
+| `LoudGreeting("Aki")` | `"HELLO, AKI"` |
+| 変更後のコード | 旧APIの `Format(name, loud)` が存在しない |
+
 ## Constraints
 
 - テストを変更せず、関数のsignatureと契約を守る。

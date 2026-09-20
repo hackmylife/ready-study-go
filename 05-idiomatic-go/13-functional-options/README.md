@@ -8,6 +8,14 @@
 
 NewClientとWithTimeoutを実装する。既定値は5秒、正のtimeoutだけを許可し、後の指定を優先する。
 
+## Examples
+
+| 入力・操作 | 期待する結果 |
+|---|---|
+| `NewClient()` | Timeoutが `5*time.Second` のClientと `nil` error |
+| `NewClient(WithTimeout(time.Second), WithTimeout(2*time.Second))` | Timeoutが `2*time.Second` のClientと `nil` error |
+| `NewClient(WithTimeout(0))` | error |
+
 ## Constraints
 
 - テストを変更せず、関数のsignatureと契約を守る。
