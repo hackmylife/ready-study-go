@@ -21,8 +21,9 @@ go test ./01-language/01-variables/...
 
 **最初のテスト失敗は正常です。** [最初の演習](01-language/01-variables/README.md)を読み、`exercise.go`のTODOを実装してください。
 
+
 ```bash
-go test ./01-language/01-variables/...
+go test ./01-language/01-variables
 go run ./cmd/koans next
 ```
 
