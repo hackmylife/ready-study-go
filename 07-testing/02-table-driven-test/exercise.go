@@ -1,0 +1,11 @@
+package koan
+
+func Grade(score int) string {
+	if score >= 80 {
+		return "A"
+	}
+	if score >= 60 {
+		return "B"
+	}
+	return "C"
+}

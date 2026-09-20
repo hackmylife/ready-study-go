@@ -1,0 +1,9 @@
+//go:build ignore
+
+package koan
+
+import (
+	"io"
+)
+
+func ReadAll(r io.Reader) ([]byte, error) { return io.ReadAll(r) }

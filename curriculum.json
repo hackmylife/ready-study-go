@@ -1,0 +1,751 @@
+[
+  {
+    "path": "01-language/01-variables",
+    "goal": "変数の宣言と代入を使う。",
+    "database": false,
+    "kind": "exercise"
+  },
+  {
+    "path": "01-language/02-constants",
+    "goal": "定数を式の中で利用する。",
+    "database": false,
+    "kind": "exercise"
+  },
+  {
+    "path": "01-language/03-if",
+    "goal": "ifで境界を含む条件分岐を書く。",
+    "database": false,
+    "kind": "exercise"
+  },
+  {
+    "path": "01-language/04-switch",
+    "goal": "switchで離散的な値を分類する。",
+    "database": false,
+    "kind": "exercise"
+  },
+  {
+    "path": "01-language/05-for",
+    "goal": "forで反復と累積を書く。",
+    "database": false,
+    "kind": "exercise"
+  },
+  {
+    "path": "01-language/06-range",
+    "goal": "rangeで値を列挙する。",
+    "database": false,
+    "kind": "exercise"
+  },
+  {
+    "path": "01-language/07-functions",
+    "goal": "引数と戻り値を持つ関数を書く。",
+    "database": false,
+    "kind": "exercise"
+  },
+  {
+    "path": "01-language/08-multiple-return-values",
+    "goal": "結果と成功可否を複数の戻り値で返す。",
+    "database": false,
+    "kind": "exercise"
+  },
+  {
+    "path": "01-language/09-pointers",
+    "goal": "ポインタを介して呼び出し元の値を更新する。",
+    "database": false,
+    "kind": "exercise"
+  },
+  {
+    "path": "01-language/10-structs",
+    "goal": "関連する値をstructにまとめる。",
+    "database": false,
+    "kind": "exercise"
+  },
+  {
+    "path": "01-language/11-methods",
+    "goal": "型に関連する振る舞いをmethodにする。",
+    "database": false,
+    "kind": "exercise"
+  },
+  {
+    "path": "01-language/12-pointer-receiver",
+    "goal": "methodで元のstructを更新する。",
+    "database": false,
+    "kind": "exercise"
+  },
+  {
+    "path": "01-language/13-value-receiver",
+    "goal": "value receiverで元の値を保つ。",
+    "database": false,
+    "kind": "exercise"
+  },
+  {
+    "path": "02-data/01-string",
+    "goal": "stringの長さがバイト数であることを理解する。",
+    "database": false,
+    "kind": "exercise"
+  },
+  {
+    "path": "02-data/02-strings-package",
+    "goal": "stringsで空白を正規化する。",
+    "database": false,
+    "kind": "exercise"
+  },
+  {
+    "path": "02-data/03-rune",
+    "goal": "UTF-8のコードポイントを扱う。",
+    "database": false,
+    "kind": "exercise"
+  },
+  {
+    "path": "02-data/04-slice-create",
+    "goal": "長さを持つsliceを作る。",
+    "database": false,
+    "kind": "exercise"
+  },
+  {
+    "path": "02-data/05-slice-append",
+    "goal": "appendの戻り値を利用する。",
+    "database": false,
+    "kind": "exercise"
+  },
+  {
+    "path": "02-data/06-slice-range",
+    "goal": "sliceを走査して新しいsliceを作る。",
+    "database": false,
+    "kind": "exercise"
+  },
+  {
+    "path": "02-data/07-slice-filter",
+    "goal": "条件を満たす要素だけを残す。",
+    "database": false,
+    "kind": "exercise"
+  },
+  {
+    "path": "02-data/08-slice-copy",
+    "goal": "共有しないsliceのコピーを作る。",
+    "database": false,
+    "kind": "exercise"
+  },
+  {
+    "path": "02-data/09-nil-slice",
+    "goal": "nil sliceと空sliceの外部表現を区別する。",
+    "database": false,
+    "kind": "exercise"
+  },
+  {
+    "path": "02-data/10-map-create",
+    "goal": "書き込み可能なmapを作る。",
+    "database": false,
+    "kind": "exercise"
+  },
+  {
+    "path": "02-data/11-map-lookup",
+    "goal": "mapから値を取り出す。",
+    "database": false,
+    "kind": "exercise"
+  },
+  {
+    "path": "02-data/12-comma-ok",
+    "goal": "登録済みゼロ値と未登録を区別する。",
+    "database": false,
+    "kind": "exercise"
+  },
+  {
+    "path": "02-data/13-map-count",
+    "goal": "mapのゼロ値を集計に使う。",
+    "database": false,
+    "kind": "exercise"
+  },
+  {
+    "path": "02-data/14-map-grouping",
+    "goal": "mapとsliceを組み合わせて分類する。",
+    "database": false,
+    "kind": "exercise"
+  },
+  {
+    "path": "03-standard-library/01-strconv",
+    "goal": "文字列を数値に変換しエラーを扱う。",
+    "database": false,
+    "kind": "exercise"
+  },
+  {
+    "path": "03-standard-library/02-time",
+    "goal": "time.Durationで経過時間を扱う。",
+    "database": false,
+    "kind": "exercise"
+  },
+  {
+    "path": "03-standard-library/03-time-parse",
+    "goal": "Goのlayoutで日時をパースする。",
+    "database": false,
+    "kind": "exercise"
+  },
+  {
+    "path": "03-standard-library/04-time-zone",
+    "goal": "瞬間を保って表示タイムゾーンを変える。",
+    "database": false,
+    "kind": "exercise"
+  },
+  {
+    "path": "03-standard-library/05-json-marshal",
+    "goal": "structをJSONの契約に合わせて出力する。",
+    "database": false,
+    "kind": "exercise"
+  },
+  {
+    "path": "03-standard-library/06-json-unmarshal",
+    "goal": "JSONからstructに読み込む。",
+    "database": false,
+    "kind": "exercise"
+  },
+  {
+    "path": "03-standard-library/07-json-decoder",
+    "goal": "Readerから厳密に一つのJSON値を読む。",
+    "database": false,
+    "kind": "exercise"
+  },
+  {
+    "path": "03-standard-library/08-file-read",
+    "goal": "ファイルを読み、OSのエラーを返す。",
+    "database": false,
+    "kind": "exercise"
+  },
+  {
+    "path": "03-standard-library/09-file-write",
+    "goal": "ファイルの上書きと権限を扱う。",
+    "database": false,
+    "kind": "exercise"
+  },
+  {
+    "path": "03-standard-library/10-bufio",
+    "goal": "Scannerで行を読み、走査エラーを確認する。",
+    "database": false,
+    "kind": "exercise"
+  },
+  {
+    "path": "03-standard-library/11-csv",
+    "goal": "CSVの引用符と区切りを正しく扱う。",
+    "database": false,
+    "kind": "exercise"
+  },
+  {
+    "path": "03-standard-library/12-io-reader",
+    "goal": "具体的な入力元に依存せず読む。",
+    "database": false,
+    "kind": "exercise"
+  },
+  {
+    "path": "03-standard-library/13-io-writer",
+    "goal": "出力先をio.Writerとして受け取る。",
+    "database": false,
+    "kind": "exercise"
+  },
+  {
+    "path": "04-errors/01-error",
+    "goal": "成功と失敗をerrorで表す。",
+    "database": false,
+    "kind": "exercise"
+  },
+  {
+    "path": "04-errors/02-errors-new",
+    "goal": "固定メッセージのerrorを作る。",
+    "database": false,
+    "kind": "exercise"
+  },
+  {
+    "path": "04-errors/03-fmt-errorf",
+    "goal": "エラーに具体的な値を含める。",
+    "database": false,
+    "kind": "exercise"
+  },
+  {
+    "path": "04-errors/04-error-wrapping",
+    "goal": "文脈を追加して元のerrorを保持する。",
+    "database": false,
+    "kind": "exercise"
+  },
+  {
+    "path": "04-errors/05-errors-is",
+    "goal": "wrapされたsentinel errorを判定する。",
+    "database": false,
+    "kind": "exercise"
+  },
+  {
+    "path": "04-errors/06-errors-as",
+    "goal": "errorから型付き情報を取り出す。",
+    "database": false,
+    "kind": "exercise"
+  },
+  {
+    "path": "04-errors/07-sentinel-error",
+    "goal": "呼び出し元が比較できるerrorを公開する。",
+    "database": false,
+    "kind": "exercise"
+  },
+  {
+    "path": "04-errors/08-custom-error",
+    "goal": "入力に結びつく情報をerror型で返す。",
+    "database": false,
+    "kind": "exercise"
+  },
+  {
+    "path": "04-errors/09-defer",
+    "goal": "成功・失敗のどちらでも後処理する。",
+    "database": false,
+    "kind": "exercise"
+  },
+  {
+    "path": "04-errors/10-cleanup",
+    "goal": "本処理とcloseの両方のerrorを保持する。",
+    "database": false,
+    "kind": "exercise"
+  },
+  {
+    "path": "05-idiomatic-go/01-zero-value",
+    "goal": "初期化しなくても使える型を設計する。",
+    "database": false,
+    "kind": "exercise"
+  },
+  {
+    "path": "05-idiomatic-go/02-remove-constructor",
+    "goal": "不要なconstructorを削る。",
+    "database": false,
+    "kind": "exercise"
+  },
+  {
+    "path": "05-idiomatic-go/03-small-interface",
+    "goal": "利用側が必要とするmethodだけを要求する。",
+    "database": false,
+    "kind": "exercise"
+  },
+  {
+    "path": "05-idiomatic-go/04-interface-consumer-side",
+    "goal": "利用側で必要な依存を定義する。",
+    "database": false,
+    "kind": "exercise"
+  },
+  {
+    "path": "05-idiomatic-go/05-remove-interface",
+    "goal": "一つの具体型にしか役割がないinterfaceを削る。",
+    "database": false,
+    "kind": "exercise"
+  },
+  {
+    "path": "05-idiomatic-go/06-accept-interface-return-struct",
+    "goal": "入力はinterface、出力は具体型にする。",
+    "database": false,
+    "kind": "exercise"
+  },
+  {
+    "path": "05-idiomatic-go/07-composition",
+    "goal": "部品を組み合わせて振る舞いを加える。",
+    "database": false,
+    "kind": "exercise"
+  },
+  {
+    "path": "05-idiomatic-go/08-early-return",
+    "goal": "失敗条件を先に処理して通常経路を平坦にする。",
+    "database": false,
+    "kind": "exercise"
+  },
+  {
+    "path": "05-idiomatic-go/09-package-design",
+    "goal": "責務に沿って公開APIを絞る。",
+    "database": false,
+    "kind": "exercise"
+  },
+  {
+    "path": "05-idiomatic-go/10-remove-utils",
+    "goal": "用途の分からないutilsから責務のある場所へ処理を移す。",
+    "database": false,
+    "kind": "exercise",
+    "remove": [
+      "utils"
+    ]
+  },
+  {
+    "path": "05-idiomatic-go/11-explicit-dependency",
+    "goal": "時計を明示的な依存として渡す。",
+    "database": false,
+    "kind": "exercise"
+  },
+  {
+    "path": "05-idiomatic-go/12-simple-api",
+    "goal": "boolフラグの意味が伝わるAPIにする。",
+    "database": false,
+    "kind": "exercise"
+  },
+  {
+    "path": "05-idiomatic-go/13-functional-options",
+    "goal": "省略可能な設定にfunctional optionsを使う。",
+    "database": false,
+    "kind": "exercise"
+  },
+  {
+    "path": "05-idiomatic-go/14-dont-use-functional-options",
+    "goal": "設定が一つのAPIから不要なoptionを削る。",
+    "database": false,
+    "kind": "exercise"
+  },
+  {
+    "path": "06-concurrency/01-goroutine",
+    "goal": "goroutineを起動し完了を待つ。",
+    "database": false,
+    "kind": "exercise"
+  },
+  {
+    "path": "06-concurrency/02-waitgroup",
+    "goal": "複数のgoroutineを待ち合わせる。",
+    "database": false,
+    "kind": "exercise"
+  },
+  {
+    "path": "06-concurrency/03-channel",
+    "goal": "channelで値を受け渡す。",
+    "database": false,
+    "kind": "exercise"
+  },
+  {
+    "path": "06-concurrency/04-buffered-channel",
+    "goal": "bufferを使って即時受信可能なchannelを作る。",
+    "database": false,
+    "kind": "exercise"
+  },
+  {
+    "path": "06-concurrency/05-close-channel",
+    "goal": "送信側がchannelの終了を所有する。",
+    "database": false,
+    "kind": "exercise"
+  },
+  {
+    "path": "06-concurrency/06-select",
+    "goal": "複数の通信をselectで待つ。",
+    "database": false,
+    "kind": "exercise"
+  },
+  {
+    "path": "06-concurrency/07-context",
+    "goal": "contextを下流へ伝播する。",
+    "database": false,
+    "kind": "exercise"
+  },
+  {
+    "path": "06-concurrency/08-context-cancel",
+    "goal": "送信待ちのgoroutineをキャンセルで終了させる。",
+    "database": false,
+    "kind": "exercise"
+  },
+  {
+    "path": "06-concurrency/09-context-timeout",
+    "goal": "子contextの期限と後始末を管理する。",
+    "database": false,
+    "kind": "exercise"
+  },
+  {
+    "path": "06-concurrency/10-worker-pool",
+    "goal": "固定数のworkerで仕事を配る。",
+    "database": false,
+    "kind": "exercise"
+  },
+  {
+    "path": "06-concurrency/11-bounded-concurrency",
+    "goal": "同時実行数の上限を守る。",
+    "database": false,
+    "kind": "exercise"
+  },
+  {
+    "path": "06-concurrency/12-race-condition",
+    "goal": "共有カウンタの競合を修正する。",
+    "database": false,
+    "kind": "exercise",
+    "race": true
+  },
+  {
+    "path": "06-concurrency/13-mutex",
+    "goal": "複数操作をmutexで保護する。",
+    "database": false,
+    "kind": "exercise",
+    "race": true
+  },
+  {
+    "path": "06-concurrency/14-remove-goroutine",
+    "goal": "即座に待つだけのgoroutineを削る。",
+    "database": false,
+    "kind": "exercise"
+  },
+  {
+    "path": "07-testing/01-basic-test",
+    "goal": "標準testingで結果を検証する。",
+    "database": false,
+    "kind": "testing"
+  },
+  {
+    "path": "07-testing/02-table-driven-test",
+    "goal": "入力と期待値をtableにまとめる。",
+    "database": false,
+    "kind": "testing"
+  },
+  {
+    "path": "07-testing/03-subtest",
+    "goal": "ケース名で失敗を特定する。",
+    "database": false,
+    "kind": "testing"
+  },
+  {
+    "path": "07-testing/04-test-helper",
+    "goal": "重複する検証をhelperにまとめる。",
+    "database": false,
+    "kind": "testing"
+  },
+  {
+    "path": "07-testing/05-error-test",
+    "goal": "errorの原因を文字列以外で検証する。",
+    "database": false,
+    "kind": "testing"
+  },
+  {
+    "path": "07-testing/06-http-test",
+    "goal": "httptestでHTTPを検証する。",
+    "database": false,
+    "kind": "testing"
+  },
+  {
+    "path": "07-testing/07-fake",
+    "goal": "小さなfakeで外部依存を検証する。",
+    "database": false,
+    "kind": "testing"
+  },
+  {
+    "path": "07-testing/08-small-interface-for-testing",
+    "goal": "必要な操作だけのfakeで設計を確かめる。",
+    "database": false,
+    "kind": "testing"
+  },
+  {
+    "path": "08-http/01-handler",
+    "goal": "http.HandlerFuncで応答を書く。",
+    "database": false,
+    "kind": "exercise"
+  },
+  {
+    "path": "08-http/02-servemux",
+    "goal": "標準ServeMuxでmethodとpathをルーティングする。",
+    "database": false,
+    "kind": "exercise"
+  },
+  {
+    "path": "08-http/03-path-parameter",
+    "goal": "PathValueでpathの値を読む。",
+    "database": false,
+    "kind": "exercise"
+  },
+  {
+    "path": "08-http/04-query-parameter",
+    "goal": "query parameterを読み検証する。",
+    "database": false,
+    "kind": "exercise"
+  },
+  {
+    "path": "08-http/05-json-response",
+    "goal": "JSONのheaderと本文を返す。",
+    "database": false,
+    "kind": "exercise"
+  },
+  {
+    "path": "08-http/06-json-request",
+    "goal": "HTTP本文から入力を読み、境界を検証する。",
+    "database": false,
+    "kind": "exercise"
+  },
+  {
+    "path": "08-http/07-status-code",
+    "goal": "statusとLocationでリソース作成を伝える。",
+    "database": false,
+    "kind": "exercise"
+  },
+  {
+    "path": "08-http/08-error-response",
+    "goal": "内部errorを公開用のHTTP応答へ写す。",
+    "database": false,
+    "kind": "exercise"
+  },
+  {
+    "path": "08-http/09-middleware",
+    "goal": "handlerを包んで共通処理を合成する。",
+    "database": false,
+    "kind": "exercise"
+  },
+  {
+    "path": "08-http/10-http-client",
+    "goal": "HTTP Clientのstatusとbody寿命を扱う。",
+    "database": false,
+    "kind": "exercise"
+  },
+  {
+    "path": "08-http/11-client-timeout",
+    "goal": "Client全体のtimeoutを設定する。",
+    "database": false,
+    "kind": "exercise"
+  },
+  {
+    "path": "08-http/12-context",
+    "goal": "HTTP requestのcontextを下流へ伝える。",
+    "database": false,
+    "kind": "exercise"
+  },
+  {
+    "path": "08-http/13-graceful-shutdown",
+    "goal": "処理中のrequestを待ち、期限超過時は接続を閉じる。",
+    "database": false,
+    "kind": "exercise"
+  },
+  {
+    "path": "09-batch/01-read-lines",
+    "goal": "行入力を逐次処理する。",
+    "database": false,
+    "kind": "exercise"
+  },
+  {
+    "path": "09-batch/02-read-csv",
+    "goal": "CSVを業務上のレコードへ読む。",
+    "database": false,
+    "kind": "exercise"
+  },
+  {
+    "path": "09-batch/03-transform",
+    "goal": "値を変更せず業務変換する。",
+    "database": false,
+    "kind": "exercise"
+  },
+  {
+    "path": "09-batch/04-validation",
+    "goal": "レコードの妥当性を検証する。",
+    "database": false,
+    "kind": "exercise"
+  },
+  {
+    "path": "09-batch/05-stream-processing",
+    "goal": "入力を全保持せず出力へ流す。",
+    "database": false,
+    "kind": "exercise"
+  },
+  {
+    "path": "09-batch/06-error-handling",
+    "goal": "行番号をerrorへ追加し原因を保持する。",
+    "database": false,
+    "kind": "exercise"
+  },
+  {
+    "path": "09-batch/07-concurrent-processing",
+    "goal": "バッチ処理に上限付き並行実行を組み込む。",
+    "database": false,
+    "kind": "exercise"
+  },
+  {
+    "path": "09-batch/08-context-cancellation",
+    "goal": "レコード間でキャンセルを観測する。",
+    "database": false,
+    "kind": "exercise"
+  },
+  {
+    "path": "10-database/01-open",
+    "goal": "database/sqlの接続poolを開き接続を確認する。",
+    "database": true,
+    "kind": "exercise"
+  },
+  {
+    "path": "10-database/02-query-row",
+    "goal": "単一行の値を読む。",
+    "database": true,
+    "kind": "exercise"
+  },
+  {
+    "path": "10-database/03-query",
+    "goal": "複数行を読み、Rowsを閉じる。",
+    "database": true,
+    "kind": "exercise"
+  },
+  {
+    "path": "10-database/04-scan",
+    "goal": "SQL NULLとゼロ値を区別する。",
+    "database": true,
+    "kind": "exercise"
+  },
+  {
+    "path": "10-database/05-exec",
+    "goal": "更新件数を確認する。",
+    "database": true,
+    "kind": "exercise"
+  },
+  {
+    "path": "10-database/06-context",
+    "goal": "DB操作にキャンセルを伝える。",
+    "database": true,
+    "kind": "exercise"
+  },
+  {
+    "path": "10-database/07-not-found",
+    "goal": "DB固有の未登録を用途のerrorへ変換する。",
+    "database": true,
+    "kind": "exercise"
+  },
+  {
+    "path": "10-database/08-transaction",
+    "goal": "複数更新を一つのtransactionにする。",
+    "database": true,
+    "kind": "exercise"
+  },
+  {
+    "path": "10-database/09-rollback",
+    "goal": "callback失敗時にtransactionを取り消す。",
+    "database": true,
+    "kind": "exercise"
+  },
+  {
+    "path": "10-database/10-transfer",
+    "goal": "残高移動の原子性と並行実行を守る。",
+    "database": true,
+    "kind": "exercise"
+  },
+  {
+    "path": "11-practical/01-http-server",
+    "goal": "JSON APIを標準HTTPと同期機構で組み立てる。",
+    "database": false,
+    "kind": "exercise"
+  },
+  {
+    "path": "11-practical/02-http-client",
+    "goal": "複数のHTTP requestを安全にまとめる。",
+    "database": false,
+    "kind": "exercise"
+  },
+  {
+    "path": "11-practical/03-csv-batch",
+    "goal": "CSVの入力から検証・変換・出力まで作る。",
+    "database": false,
+    "kind": "exercise"
+  },
+  {
+    "path": "11-practical/04-database-crud",
+    "goal": "SQLでCRUDを一通り実装する。",
+    "database": true,
+    "kind": "exercise"
+  },
+  {
+    "path": "11-practical/05-transaction",
+    "goal": "残高と履歴の永続化を一つの単位にする。",
+    "database": true,
+    "kind": "exercise"
+  },
+  {
+    "path": "11-practical/06-concurrent-batch",
+    "goal": "I/O・変換・並行実行・errorを組み合わせる。",
+    "database": false,
+    "kind": "exercise"
+  },
+  {
+    "path": "12-capstone/payment-api",
+    "goal": "口座と送金を持つ小さなPayment APIを完成させる。",
+    "database": true,
+    "kind": "capstone"
+  }
+]

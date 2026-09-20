@@ -1,0 +1,9 @@
+package koan
+
+import (
+	"errors"
+)
+
+var ErrMissing = errors.New("missing")
+
+func Load(found bool) error { return ErrMissing }

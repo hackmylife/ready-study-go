@@ -1,0 +1,5 @@
+package koan
+
+type Notifier interface{ Notify(string, string) error }
+
+func Send(n Notifier, to string) error { return n.Notify(to, "Welcome") }

@@ -1,0 +1,42 @@
+name: Exercise
+
+on:
+  workflow_dispatch:
+    inputs:
+      exercise:
+        description: '演習パス (例: 01-language/01-variables)'
+        required: true
+        default: 01-language/01-variables
+        type: string
+
+permissions:
+  contents: read
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    services:
+      postgres:
+        image: postgres:18-alpine
+        env:
+          POSTGRES_USER: koans
+          POSTGRES_PASSWORD: koans
+          POSTGRES_DB: koans
+        ports:
+          - 5432:5432
+        options: >-
+          --health-cmd "pg_isready -U koans -d koans"
+          --health-interval 5s
+          --health-timeout 5s
+          --health-retries 10
+    env:
+      KOANS_DATABASE_URL: postgres://koans:koans@127.0.0.1:5432/koans?sslmode=disable
+      EXERCISE: ${{ inputs.exercise }}
+    steps:
+      - uses: actions/checkout@v7.0.1
+      - uses: actions/setup-go@v7.0.0
+        with:
+          go-version-file: go.mod
+          cache: true
+      - run: go run ./cmd/koans check "$EXERCISE"

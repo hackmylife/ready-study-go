@@ -1,0 +1,16 @@
+services:
+  postgres:
+    image: postgres:18-alpine
+    environment:
+      POSTGRES_USER: koans
+      POSTGRES_PASSWORD: koans
+      POSTGRES_DB: koans
+    ports:
+      - "127.0.0.1:${KOANS_DB_PORT:-55432}:5432"
+    tmpfs:
+      - /var/lib/postgresql
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U koans -d koans"]
+      interval: 2s
+      timeout: 3s
+      retries: 20

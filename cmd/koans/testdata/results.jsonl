@@ -1,0 +1,29 @@
+{"Time":"2026-09-20T09:36:12.141747+09:00","Action":"start","Package":"koans-fixture/empty"}
+{"Time":"2026-09-20T09:36:12.141982+09:00","Action":"output","Package":"koans-fixture/empty","Output":"?   \tkoans-fixture/empty\t[no test files]\n"}
+{"Time":"2026-09-20T09:36:12.141994+09:00","Action":"skip","Package":"koans-fixture/empty","Elapsed":0}
+{"Time":"2026-09-20T09:36:12.873258+09:00","Action":"start","Package":"koans-fixture/fail"}
+{"Time":"2026-09-20T09:36:12.873641+09:00","Action":"start","Package":"koans-fixture/pass"}
+{"Time":"2026-09-20T09:36:12.873702+09:00","Action":"start","Package":"koans-fixture/skip"}
+{"Time":"2026-09-20T09:36:13.105835+09:00","Action":"run","Package":"koans-fixture/fail","Test":"TestFail"}
+{"Time":"2026-09-20T09:36:13.105898+09:00","Action":"output","Package":"koans-fixture/fail","Test":"TestFail","Output":"=== RUN   TestFail\n","OutputType":"frame"}
+{"Time":"2026-09-20T09:36:13.105921+09:00","Action":"output","Package":"koans-fixture/fail","Test":"TestFail","Output":"    exercise_test.go:3: incorrect value\n","OutputType":"error"}
+{"Time":"2026-09-20T09:36:13.105939+09:00","Action":"output","Package":"koans-fixture/fail","Test":"TestFail","Output":"--- FAIL: TestFail (0.00s)\n","OutputType":"frame"}
+{"Time":"2026-09-20T09:36:13.105941+09:00","Action":"fail","Package":"koans-fixture/fail","Test":"TestFail","Elapsed":0}
+{"Time":"2026-09-20T09:36:13.105948+09:00","Action":"output","Package":"koans-fixture/fail","Output":"FAIL\n","OutputType":"frame"}
+{"Time":"2026-09-20T09:36:13.106532+09:00","Action":"output","Package":"koans-fixture/fail","Output":"FAIL\tkoans-fixture/fail\t0.233s\n","OutputType":"frame"}
+{"Time":"2026-09-20T09:36:13.106556+09:00","Action":"fail","Package":"koans-fixture/fail","Elapsed":0.233}
+{"Time":"2026-09-20T09:36:13.286956+09:00","Action":"run","Package":"koans-fixture/pass","Test":"TestPass"}
+{"Time":"2026-09-20T09:36:13.286988+09:00","Action":"output","Package":"koans-fixture/pass","Test":"TestPass","Output":"=== RUN   TestPass\n","OutputType":"frame"}
+{"Time":"2026-09-20T09:36:13.287005+09:00","Action":"output","Package":"koans-fixture/pass","Test":"TestPass","Output":"--- PASS: TestPass (0.00s)\n","OutputType":"frame"}
+{"Time":"2026-09-20T09:36:13.287025+09:00","Action":"pass","Package":"koans-fixture/pass","Test":"TestPass","Elapsed":0}
+{"Time":"2026-09-20T09:36:13.28703+09:00","Action":"output","Package":"koans-fixture/pass","Output":"PASS\n","OutputType":"frame"}
+{"Time":"2026-09-20T09:36:13.287371+09:00","Action":"output","Package":"koans-fixture/pass","Output":"ok  \tkoans-fixture/pass\t0.414s\n"}
+{"Time":"2026-09-20T09:36:13.287382+09:00","Action":"pass","Package":"koans-fixture/pass","Elapsed":0.414}
+{"Time":"2026-09-20T09:36:13.467154+09:00","Action":"run","Package":"koans-fixture/skip","Test":"TestSkip"}
+{"Time":"2026-09-20T09:36:13.467207+09:00","Action":"output","Package":"koans-fixture/skip","Test":"TestSkip","Output":"=== RUN   TestSkip\n","OutputType":"frame"}
+{"Time":"2026-09-20T09:36:13.467237+09:00","Action":"output","Package":"koans-fixture/skip","Test":"TestSkip","Output":"    exercise_test.go:3: dependency unavailable\n"}
+{"Time":"2026-09-20T09:36:13.46726+09:00","Action":"output","Package":"koans-fixture/skip","Test":"TestSkip","Output":"--- SKIP: TestSkip (0.00s)\n","OutputType":"frame"}
+{"Time":"2026-09-20T09:36:13.467266+09:00","Action":"skip","Package":"koans-fixture/skip","Test":"TestSkip","Elapsed":0}
+{"Time":"2026-09-20T09:36:13.467269+09:00","Action":"output","Package":"koans-fixture/skip","Output":"PASS\n","OutputType":"frame"}
+{"Time":"2026-09-20T09:36:13.467714+09:00","Action":"output","Package":"koans-fixture/skip","Output":"ok  \tkoans-fixture/skip\t0.594s\n"}
+{"Time":"2026-09-20T09:36:13.467723+09:00","Action":"pass","Package":"koans-fixture/skip","Elapsed":0.594}

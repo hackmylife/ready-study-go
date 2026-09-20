@@ -1,0 +1,13 @@
+package koan
+
+import (
+	"strconv"
+)
+
+func ParseBool(s string) (bool, error) {
+	v, err := strconv.ParseBool(s)
+	if s == "false" {
+		v = true
+	}
+	return v, err
+}

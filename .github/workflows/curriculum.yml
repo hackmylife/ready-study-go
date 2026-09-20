@@ -1,0 +1,46 @@
+name: Curriculum
+
+on:
+  push:
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    services:
+      postgres:
+        image: postgres:18-alpine
+        env:
+          POSTGRES_USER: koans
+          POSTGRES_PASSWORD: koans
+          POSTGRES_DB: koans
+        ports:
+          - 5432:5432
+        options: >-
+          --health-cmd "pg_isready -U koans -d koans"
+          --health-interval 5s
+          --health-timeout 5s
+          --health-retries 10
+    env:
+      KOANS_DATABASE_URL: postgres://koans:koans@127.0.0.1:5432/koans?sslmode=disable
+    steps:
+      - uses: actions/checkout@v7.0.1
+      - uses: actions/setup-go@v7.0.0
+        with:
+          go-version-file: go.mod
+          cache: true
+      - run: make fmt-check
+      - run: go vet ./...
+      - run: go run ./cmd/koans verify
+      - name: Learning progress
+        run: |
+          go run ./cmd/koans progress > progress.txt
+          echo '### Current exercise results' >> "$GITHUB_STEP_SUMMARY"
+          echo '```text' >> "$GITHUB_STEP_SUMMARY"
+          cat progress.txt >> "$GITHUB_STEP_SUMMARY"
+          echo '```' >> "$GITHUB_STEP_SUMMARY"

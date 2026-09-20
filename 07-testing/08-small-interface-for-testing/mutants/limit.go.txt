@@ -1,0 +1,7 @@
+package koan
+
+import (
+	"io"
+)
+
+func CopyFirst(r io.Reader, n int64) ([]byte, error) { return io.ReadAll(r) }

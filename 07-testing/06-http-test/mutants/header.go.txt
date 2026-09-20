@@ -1,0 +1,8 @@
+package koan
+
+import (
+	"io"
+	"net/http"
+)
+
+func Health(w http.ResponseWriter, r *http.Request) { _, _ = io.WriteString(w, `{"status":"ok"}`) }

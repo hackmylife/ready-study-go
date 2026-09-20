@@ -1,0 +1,3 @@
+package koan
+
+func Abs(n int) int { return n }
