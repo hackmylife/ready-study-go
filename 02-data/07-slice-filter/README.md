@@ -8,6 +8,8 @@
 
 Positiveは順序を保ち正の値だけを返す。該当なしはnil。入力を変更しない。
 
+これはコレクション操作のfilterに相当します。[map・flatMapとの違い](../../docs/loops-and-collections.md)も参照してください。
+
 ## Examples
 
 | 入力・操作 | 期待する結果 |

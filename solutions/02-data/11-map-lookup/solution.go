@@ -2,4 +2,6 @@
 
 package koan
 
-func Stock(stock map[string]int, item string) int { return stock[item] }
+func Stock(stock map[string]int, item string) int {
+	return stock[item]
+}

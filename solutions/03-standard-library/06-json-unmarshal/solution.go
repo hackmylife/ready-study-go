@@ -11,4 +11,8 @@ type User struct {
 	Age  int    `json:"age"`
 }
 
-func Decode(data []byte) (User, error) { var u User; err := json.Unmarshal(data, &u); return u, err }
+func Decode(data []byte) (User, error) {
+	var u User
+	err := json.Unmarshal(data, &u)
+	return u, err
+}

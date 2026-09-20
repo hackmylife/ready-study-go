@@ -10,7 +10,9 @@ import (
 
 type errorReader struct{ err error }
 
-func (r errorReader) Read([]byte) (int, error) { return 0, r.err }
+func (r errorReader) Read([]byte) (int, error) {
+	return 0, r.err
+}
 func TestCopyFirst(t *testing.T) {
 	b, err := CopyFirst(strings.NewReader("abcdef"), 3)
 	noError(t, err)

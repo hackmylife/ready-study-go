@@ -6,4 +6,6 @@ import (
 	"time"
 )
 
-func IssuedAt(now func() time.Time) string { return now().Format(time.RFC3339) }
+func IssuedAt(now func() time.Time) string {
+	return now().Format(time.RFC3339)
+}

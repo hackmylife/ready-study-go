@@ -12,7 +12,11 @@ type fakeNotifier struct {
 	err      error
 }
 
-func (f *fakeNotifier) Notify(to, body string) error { f.to = to; f.body = body; return f.err }
+func (f *fakeNotifier) Notify(to, body string) error {
+	f.to = to
+	f.body = body
+	return f.err
+}
 func TestSend(t *testing.T) {
 	f := &fakeNotifier{}
 	noError(t, Send(f, "aki@example.test"))

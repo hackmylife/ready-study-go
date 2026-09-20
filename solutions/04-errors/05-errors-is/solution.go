@@ -7,4 +7,6 @@ import (
 	"os"
 )
 
-func Missing(err error) bool { return errors.Is(err, os.ErrNotExist) }
+func Missing(err error) bool {
+	return errors.Is(err, os.ErrNotExist)
+}

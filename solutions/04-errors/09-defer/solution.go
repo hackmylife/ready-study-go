@@ -2,4 +2,7 @@
 
 package koan
 
-func Use(work func() error, close func()) error { defer close(); return work() }
+func Use(work func() error, close func()) error {
+	defer close()
+	return work()
+}

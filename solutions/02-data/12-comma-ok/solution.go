@@ -2,4 +2,7 @@
 
 package koan
 
-func Lookup(m map[string]int, key string) (int, bool) { value, ok := m[key]; return value, ok }
+func Lookup(m map[string]int, key string) (int, bool) {
+	value, ok := m[key]
+	return value, ok
+}

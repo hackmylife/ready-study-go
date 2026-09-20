@@ -17,3 +17,9 @@
 | [11-methods](11-methods/README.md) | 型に関連する振る舞いをmethodにする。 |
 | [12-pointer-receiver](12-pointer-receiver/README.md) | methodで元のstructを更新する。 |
 | [13-value-receiver](13-value-receiver/README.md) | value receiverで元の値を保つ。 |
+| [14-for-condition](14-for-condition/README.md) | 条件だけのforで反復の終了を表す。 |
+| [15-for-break-continue](15-for-break-continue/README.md) | breakとcontinueで反復を制御する。 |
+| [16-range-integer](16-range-integer/README.md) | 整数へのrangeで回数を指定する。 |
+| [17-range-index](17-range-index/README.md) | rangeの添字を使って元のsliceを更新する。 |
+
+[ループの各形式とmap・filter・flatMapの対応](../docs/loops-and-collections.md)も参照してください。

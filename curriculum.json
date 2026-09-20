@@ -78,6 +78,30 @@
     "kind": "exercise"
   },
   {
+    "path": "01-language/14-for-condition",
+    "goal": "条件だけのforで反復の終了を表す。",
+    "database": false,
+    "kind": "exercise"
+  },
+  {
+    "path": "01-language/15-for-break-continue",
+    "goal": "breakとcontinueで反復を制御する。",
+    "database": false,
+    "kind": "exercise"
+  },
+  {
+    "path": "01-language/16-range-integer",
+    "goal": "整数へのrangeで回数を指定する。",
+    "database": false,
+    "kind": "exercise"
+  },
+  {
+    "path": "01-language/17-range-index",
+    "goal": "rangeの添字を使って元のsliceを更新する。",
+    "database": false,
+    "kind": "exercise"
+  },
+  {
     "path": "02-data/01-string",
     "goal": "stringの長さがバイト数であることを理解する。",
     "database": false,
@@ -158,6 +182,36 @@
   {
     "path": "02-data/14-map-grouping",
     "goal": "mapとsliceを組み合わせて分類する。",
+    "database": false,
+    "kind": "exercise"
+  },
+  {
+    "path": "02-data/15-slice-map",
+    "goal": "変換関数を受け取り各要素を一対一で変換する。",
+    "database": false,
+    "kind": "exercise"
+  },
+  {
+    "path": "02-data/16-slice-flat-map",
+    "goal": "各要素の変換結果を一段平らに連結する。",
+    "database": false,
+    "kind": "exercise"
+  },
+  {
+    "path": "02-data/17-slice-reduce",
+    "goal": "初期値から順番に値を畳み込む。",
+    "database": false,
+    "kind": "exercise"
+  },
+  {
+    "path": "02-data/18-map-keys",
+    "goal": "mapsとslicesでmapのキーを順序付きで取り出す。",
+    "database": false,
+    "kind": "exercise"
+  },
+  {
+    "path": "02-data/19-range-iterator",
+    "goal": "iteratorをrangeし、必要な件数で走査を終了する。",
     "database": false,
     "kind": "exercise"
   },

@@ -7,4 +7,6 @@ type User struct {
 	Age  int
 }
 
-func NewUser(name string, age int) User { return User{Name: name, Age: age} }
+func NewUser(name string, age int) User {
+	return User{Name: name, Age: age}
+}

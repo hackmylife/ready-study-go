@@ -2,4 +2,6 @@
 
 package koan
 
-func Zeros(n int) []int { return make([]int, n) }
+func Zeros(n int) []int {
+	return make([]int, n)
+}

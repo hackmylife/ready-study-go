@@ -45,6 +45,7 @@ go test
 * variable / constant
 * if / switch
 * for / range
+* 条件のみのfor / break / continue / 整数へのrange / 添字による要素の更新
 * function
 * multiple return values
 * pointer
@@ -53,6 +54,8 @@ go test
 * slice
 * map
 * string / rune
+* map / filter / flatMap / reduce相当のコレクション操作
+* 型パラメータを使った要素型・結果型の表現
 
 ## 標準ライブラリ
 
@@ -71,6 +74,9 @@ go test
 * context
 * net/http
 * sync
+* slices
+* maps
+* iter
 
 ## Go固有の考え方
 
@@ -434,6 +440,10 @@ utils/
 11-methods
 12-pointer-receiver
 13-value-receiver
+14-for-condition
+15-for-break-continue
+16-range-integer
+17-range-index
 ```
 
 ---
@@ -457,6 +467,11 @@ utils/
 12-comma-ok
 13-map-count
 14-map-grouping
+15-slice-map
+16-slice-flat-map
+17-slice-reduce
+18-map-keys
+19-range-iterator
 ```
 
 ここでは特に

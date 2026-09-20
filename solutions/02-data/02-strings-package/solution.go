@@ -6,4 +6,6 @@ import (
 	"strings"
 )
 
-func Normalize(s string) string { return strings.Join(strings.Fields(s), " ") }
+func Normalize(s string) string {
+	return strings.Join(strings.Fields(s), " ")
+}

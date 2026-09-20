@@ -7,4 +7,6 @@ import (
 	"io"
 )
 
-func ReadCSV(r io.Reader) ([][]string, error) { return csv.NewReader(r).ReadAll() }
+func ReadCSV(r io.Reader) ([][]string, error) {
+	return csv.NewReader(r).ReadAll()
+}

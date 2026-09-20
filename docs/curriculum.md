@@ -1,6 +1,6 @@
 # 全演習一覧
 
-実測: curriculum.jsonに登録された演習は124件です。
+実測: curriculum.jsonに登録された演習は133件です。
 
 ## 01-language
 
@@ -18,6 +18,11 @@
 - [01-language/12-pointer-receiver](../01-language/12-pointer-receiver/README.md): methodで元のstructを更新する。
 - [01-language/13-value-receiver](../01-language/13-value-receiver/README.md): value receiverで元の値を保つ。
 
+- [01-language/14-for-condition](../01-language/14-for-condition/README.md): 条件だけのforで反復の終了を表す。
+- [01-language/15-for-break-continue](../01-language/15-for-break-continue/README.md): breakとcontinueで反復を制御する。
+- [01-language/16-range-integer](../01-language/16-range-integer/README.md): 整数へのrangeで回数を指定する。
+- [01-language/17-range-index](../01-language/17-range-index/README.md): rangeの添字を使って元のsliceを更新する。
+
 ## 02-data
 
 - [02-data/01-string](../02-data/01-string/README.md): stringの長さがバイト数であることを理解する。
@@ -34,6 +39,12 @@
 - [02-data/12-comma-ok](../02-data/12-comma-ok/README.md): 登録済みゼロ値と未登録を区別する。
 - [02-data/13-map-count](../02-data/13-map-count/README.md): mapのゼロ値を集計に使う。
 - [02-data/14-map-grouping](../02-data/14-map-grouping/README.md): mapとsliceを組み合わせて分類する。
+
+- [02-data/15-slice-map](../02-data/15-slice-map/README.md): 変換関数を受け取り各要素を一対一で変換する。
+- [02-data/16-slice-flat-map](../02-data/16-slice-flat-map/README.md): 各要素の変換結果を一段平らに連結する。
+- [02-data/17-slice-reduce](../02-data/17-slice-reduce/README.md): 初期値から順番に値を畳み込む。
+- [02-data/18-map-keys](../02-data/18-map-keys/README.md): mapsとslicesでmapのキーを順序付きで取り出す。
+- [02-data/19-range-iterator](../02-data/19-range-iterator/README.md): iteratorをrangeし、必要な件数で走査を終了する。
 
 ## 03-standard-library
 

@@ -12,4 +12,6 @@ type User struct {
 	Secret string `json:"-"`
 }
 
-func Encode(u User) ([]byte, error) { return json.Marshal(u) }
+func Encode(u User) ([]byte, error) {
+	return json.Marshal(u)
+}
