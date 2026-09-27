@@ -1,0 +1,19 @@
+package koan
+
+import (
+	"context"
+	"time"
+)
+
+func Retry(ctx context.Context, attempts int, delay time.Duration, fn func() error) error {
+	var err error
+	for range attempts {
+		if ctxErr := ctx.Err(); ctxErr != nil {
+			return ctxErr
+		}
+		if err = fn(); err == nil {
+			return nil
+		}
+	}
+	return err
+}

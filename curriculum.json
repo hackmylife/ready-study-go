@@ -102,6 +102,18 @@
     "kind": "exercise"
   },
   {
+    "path": "01-language/18-closure",
+    "goal": "関数値が外側の変数を捕捉して状態を保つ。",
+    "database": false,
+    "kind": "exercise"
+  },
+  {
+    "path": "01-language/19-iota-stringer",
+    "goal": "iotaで列挙値を定義し、Stringerで表示名を持たせる。",
+    "database": false,
+    "kind": "exercise"
+  },
+  {
     "path": "02-data/01-string",
     "goal": "stringの長さがバイト数であることを理解する。",
     "database": false,
@@ -354,6 +366,12 @@
     "kind": "exercise"
   },
   {
+    "path": "04-errors/11-typed-nil",
+    "goal": "nilのポインタを入れたerrorがnilと等しくならないことを理解する。",
+    "database": false,
+    "kind": "exercise"
+  },
+  {
     "path": "05-idiomatic-go/01-zero-value",
     "goal": "初期化しなくても使える型を設計する。",
     "database": false,
@@ -527,6 +545,18 @@
     "kind": "exercise"
   },
   {
+    "path": "06-concurrency/15-rwmutex",
+    "goal": "読み取りの多い共有データをRWMutexで保護する。",
+    "database": false,
+    "kind": "exercise"
+  },
+  {
+    "path": "06-concurrency/16-ticker",
+    "goal": "Tickerとselectで、キャンセル可能な定期処理を書く。",
+    "database": false,
+    "kind": "exercise"
+  },
+  {
     "path": "07-testing/01-basic-test",
     "goal": "標準testingで結果を検証する。",
     "database": false,
@@ -571,6 +601,24 @@
   {
     "path": "07-testing/08-small-interface-for-testing",
     "goal": "必要な操作だけのfakeで設計を確かめる。",
+    "database": false,
+    "kind": "testing"
+  },
+  {
+    "path": "07-testing/09-fuzz",
+    "goal": "fuzz testで入力に依存しない性質を検証する。",
+    "database": false,
+    "kind": "testing"
+  },
+  {
+    "path": "07-testing/10-benchmark",
+    "goal": "benchmarkで性能を測り、割り当て回数をテストで固定する。",
+    "database": false,
+    "kind": "testing"
+  },
+  {
+    "path": "07-testing/11-synctest",
+    "goal": "testing/synctestの仮想時計で、時間に依存する処理を実際に待たずに検証する。",
     "database": false,
     "kind": "testing"
   },

@@ -20,3 +20,5 @@ go test -raceで検証してください。goroutineの終了条件とchannelの
 | [12-race-condition](12-race-condition/README.md) | 共有カウンタの競合を修正する。 |
 | [13-mutex](13-mutex/README.md) | 複数操作をmutexで保護する。 |
 | [14-remove-goroutine](14-remove-goroutine/README.md) | 即座に待つだけのgoroutineを削る。 |
+| [15-rwmutex](15-rwmutex/README.md) | 読み取りの多い共有データをRWMutexで保護する。 |
+| [16-ticker](16-ticker/README.md) | Tickerとselectで、キャンセル可能な定期処理を書く。 |

@@ -14,3 +14,4 @@
 | [08-custom-error](08-custom-error/README.md) | 入力に結びつく情報をerror型で返す。 |
 | [09-defer](09-defer/README.md) | 成功・失敗のどちらでも後処理する。 |
 | [10-cleanup](10-cleanup/README.md) | 本処理とcloseの両方のerrorを保持する。 |
+| [11-typed-nil](11-typed-nil/README.md) | nilのポインタを入れたerrorがnilと等しくならないことを理解する。 |

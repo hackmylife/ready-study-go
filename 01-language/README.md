@@ -21,5 +21,7 @@
 | [15-for-break-continue](15-for-break-continue/README.md) | breakとcontinueで反復を制御する。 |
 | [16-range-integer](16-range-integer/README.md) | 整数へのrangeで回数を指定する。 |
 | [17-range-index](17-range-index/README.md) | rangeの添字を使って元のsliceを更新する。 |
+| [18-closure](18-closure/README.md) | 関数値が外側の変数を捕捉して状態を保つ。 |
+| [19-iota-stringer](19-iota-stringer/README.md) | iotaで列挙値を定義し、Stringerで表示名を持たせる。 |
 
 [ループの各形式とmap・filter・flatMapの対応](../docs/loops-and-collections.md)も参照してください。

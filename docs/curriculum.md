@@ -1,6 +1,6 @@
 # 全演習一覧
 
-実測: curriculum.jsonに登録された演習は133件です。
+実測: curriculum.jsonに登録された演習は141件です。
 
 ## 01-language
 
@@ -22,6 +22,8 @@
 - [01-language/15-for-break-continue](../01-language/15-for-break-continue/README.md): breakとcontinueで反復を制御する。
 - [01-language/16-range-integer](../01-language/16-range-integer/README.md): 整数へのrangeで回数を指定する。
 - [01-language/17-range-index](../01-language/17-range-index/README.md): rangeの添字を使って元のsliceを更新する。
+- [01-language/18-closure](../01-language/18-closure/README.md): 関数値が外側の変数を捕捉して状態を保つ。
+- [01-language/19-iota-stringer](../01-language/19-iota-stringer/README.md): iotaで列挙値を定義し、Stringerで表示名を持たせる。
 
 ## 02-data
 
@@ -74,6 +76,7 @@
 - [04-errors/08-custom-error](../04-errors/08-custom-error/README.md): 入力に結びつく情報をerror型で返す。
 - [04-errors/09-defer](../04-errors/09-defer/README.md): 成功・失敗のどちらでも後処理する。
 - [04-errors/10-cleanup](../04-errors/10-cleanup/README.md): 本処理とcloseの両方のerrorを保持する。
+- [04-errors/11-typed-nil](../04-errors/11-typed-nil/README.md): nilのポインタを入れたerrorがnilと等しくならないことを理解する。
 
 ## 05-idiomatic-go
 
@@ -108,6 +111,8 @@
 - [06-concurrency/12-race-condition](../06-concurrency/12-race-condition/README.md): 共有カウンタの競合を修正する。
 - [06-concurrency/13-mutex](../06-concurrency/13-mutex/README.md): 複数操作をmutexで保護する。
 - [06-concurrency/14-remove-goroutine](../06-concurrency/14-remove-goroutine/README.md): 即座に待つだけのgoroutineを削る。
+- [06-concurrency/15-rwmutex](../06-concurrency/15-rwmutex/README.md): 読み取りの多い共有データをRWMutexで保護する。
+- [06-concurrency/16-ticker](../06-concurrency/16-ticker/README.md): Tickerとselectで、キャンセル可能な定期処理を書く。
 
 ## 07-testing
 
@@ -119,6 +124,9 @@
 - [07-testing/06-http-test](../07-testing/06-http-test/README.md): httptestでHTTPを検証する。
 - [07-testing/07-fake](../07-testing/07-fake/README.md): 小さなfakeで外部依存を検証する。
 - [07-testing/08-small-interface-for-testing](../07-testing/08-small-interface-for-testing/README.md): 必要な操作だけのfakeで設計を確かめる。
+- [07-testing/09-fuzz](../07-testing/09-fuzz/README.md): fuzz testで入力に依存しない性質を検証する。
+- [07-testing/10-benchmark](../07-testing/10-benchmark/README.md): benchmarkで性能を測り、割り当て回数をテストで固定する。
+- [07-testing/11-synctest](../07-testing/11-synctest/README.md): testing/synctestの仮想時計で、時間に依存する処理を実際に待たずに検証する。
 
 ## 08-http
 

@@ -1,0 +1,12 @@
+package koan
+
+func Join(parts []string, sep string) string {
+	out := ""
+	for i, part := range parts {
+		if i > 0 {
+			out += sep
+		}
+		out += part
+	}
+	return out
+}

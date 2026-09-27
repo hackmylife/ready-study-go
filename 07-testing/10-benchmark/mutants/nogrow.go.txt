@@ -1,0 +1,16 @@
+package koan
+
+import (
+	"strings"
+)
+
+func Join(parts []string, sep string) string {
+	var b strings.Builder
+	for i, part := range parts {
+		if i > 0 {
+			b.WriteString(sep)
+		}
+		b.WriteString(part)
+	}
+	return b.String()
+}

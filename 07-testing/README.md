@@ -14,3 +14,6 @@
 | [06-http-test](06-http-test/README.md) | httptestでHTTPを検証する。 |
 | [07-fake](07-fake/README.md) | 小さなfakeで外部依存を検証する。 |
 | [08-small-interface-for-testing](08-small-interface-for-testing/README.md) | 必要な操作だけのfakeで設計を確かめる。 |
+| [09-fuzz](09-fuzz/README.md) | fuzz testで入力に依存しない性質を検証する。 |
+| [10-benchmark](10-benchmark/README.md) | benchmarkで性能を測り、割り当て回数をテストで固定する。 |
+| [11-synctest](11-synctest/README.md) | testing/synctestの仮想時計で、時間に依存する処理を実際に待たずに検証する。 |

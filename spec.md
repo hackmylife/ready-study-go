@@ -51,6 +51,8 @@ go test
 * pointer
 * struct
 * method
+* closure
+* iotaによる列挙値とStringer
 * slice
 * map
 * string / rune
@@ -77,12 +79,14 @@ go test
 * slices
 * maps
 * iter
+* testing（fuzz・benchmark・testing/synctestを含む）
 
 ## Go固有の考え方
 
 以下をコードとして理解する。
 
 * Error is a value
+* nilポインタを入れたinterfaceはnilと等しくない
 * useful zero value
 * early return
 * small interfaces
@@ -444,6 +448,8 @@ utils/
 15-for-break-continue
 16-range-integer
 17-range-index
+18-closure
+19-iota-stringer
 ```
 
 ---
@@ -529,6 +535,7 @@ values := []string{}
 08-custom-error
 09-defer
 10-cleanup
+11-typed-nil
 ```
 
 重要原則：
@@ -589,6 +596,8 @@ error is a value
 12-race-condition
 13-mutex
 14-remove-goroutine
+15-rwmutex
+16-ticker
 ```
 
 Concurrency Exerciseでは必要に応じて、
@@ -626,6 +635,9 @@ concurrencyは目的ではなく手段
 06-http-test
 07-fake
 08-small-interface-for-testing
+09-fuzz
+10-benchmark
+11-synctest
 ```
 
 mock frameworkへの依存は避ける。
